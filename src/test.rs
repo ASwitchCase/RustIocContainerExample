@@ -1,9 +1,9 @@
 use crate::ioc_application_container::{IocApplicationContainer, Lifetime};
 
-mod ioc_application_container;
-mod test;
+#[cfg(test)]
 
-fn main() {
+#[test]
+pub fn test_service_lifetimes(){
     let mut container = IocApplicationContainer::new();
 
     // 1. Add Singleton: Created once, shared forever
